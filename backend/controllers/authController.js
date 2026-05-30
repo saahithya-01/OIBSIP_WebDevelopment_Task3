@@ -13,3 +13,19 @@ exports.registerUser = async (req, res) => {
     });
   }
 };
+exports.loginUser = async (req, res) => {
+
+  try {
+
+    res.json({
+      message: "Login Successful"
+    });
+
+  } catch (err) {
+
+    res.status(500).json({
+      message: "Server Error"
+    });
+
+  }
+};
