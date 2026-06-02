@@ -4,6 +4,7 @@ const cors = require('cors');
 const http = require('http');
 const { Server } = require('socket.io');
 const inventoryRoutes = require("./routes/inventoryRoutes");
+const paymentRoutes = require("./routes/paymentRoutes");
 
 require('dotenv').config();
 
@@ -19,6 +20,7 @@ const io = new Server(server, {
     origin: '*'
   }
 });
+app.use("/api/payment", paymentRoutes);
 app.use(
   "/api/inventory",
   inventoryRoutes
