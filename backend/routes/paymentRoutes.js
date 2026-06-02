@@ -1,4 +1,7 @@
+require("dotenv").config();
 const express = require("express");
+console.log(process.env.RAZORPAY_KEY_ID);
+console.log(process.env.RAZORPAY_SECRET);
 const Razorpay = require("razorpay");
 
 const router = express.Router();
